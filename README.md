@@ -1,27 +1,19 @@
-# HTML-Trusted-Element
+# HTML-Trusted-Input
 
-HTML DOM element for running untrusted code with access to user data in a sandboxed environment.
+## Summary
 
-## <trusted-frame>
+Chrome extension that allows the user to encrypt and decrypt content on untrusted webpages. The interface works seamlessly with pre-existing websites and creates "trusted" elements on the page that the server cannot access.
 
-### Summary
+## Features
 
-The HTMLTrustedElement provides properties and methods for running untrusted code with access to user data in a sandboxed environment.
+From the context menu, the user can convert a textarea on a webpage into a trusted textarea that the foreign server cannot access. User inputted text in this textarea is encrypted and placed back into the original textarea when the user submits it.
 
-### Attributes
+The extension also provides the ability to decrypt blocks of text in place on a webpage. The foreign server cannot read this decrypted content.
 
-+ encryptedSize: The size of the encrypted data that can be set and read from the element.
+A border is drawn around the trusted area of the page when the extension is active, to alert the user. The border color is customizeable so that ther server cannot spoof it. 
 
-### Properties
+## Implementation
 
-### Functions
+The trusted areas are implemented with iframes superimposed on top of the original website, using static webpages located on the local machine. CSS styling is identical between the original website and the trusted elements.
 
-+ getEncryptedValue (DOMString[size: encryptedSize]): Returns the encrypted data from the element.
-+ setEncryptedValue (DOMString[size: encryptedSize]): Sends encrypted data to the element. 
-+ clear: Asks the element to clear its data.
 
-## <load-resource>
-
-###Attributes
-
-+ src

@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 5px solid red;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#encryption-password {
+    text-align: center;
+    padding: 10px;
+}
+
+#user-content, #submit-button {
+    display: none;
+}
