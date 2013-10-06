@@ -1,17 +1,10 @@
-/// <reference path="types.d.ts"/>
-
-declare var $: any;
-declare var CryptoJS: any;
-declare var chrome: any;
-
-
 var id = undefined;
 window.addEventListener("message", receiveMessage, false);
 
-function receiveMessage (event) {
-    if (event.window !== window.parent()) {return}
-
-    
+function receiveMessage(event) {
+    if (event.window !== window.parent()) {
+        return;
+    }
 }
 
 $(document).ready(function () {
@@ -21,9 +14,8 @@ $(document).ready(function () {
         var encrypted_content = CryptoJS.AES.encrypt(unencrypted_content, password).toString();
         var decrypted = CryptoJS.AES.decrypt(encrypted_content, password).toString(CryptoJS.enc.Utf8);
 
-        chrome.runtime.sendMessage(<EncryptedContent>{id: id, encrypted_content: encrypted_content}, function (response) {
-                response.id
-            });
+        chrome.runtime.sendMessage({ id: id, encrypted_content: encrypted_content }, function (response) {
+            response.id;
+        });
     });
-
 });

@@ -3,13 +3,16 @@
   <head>
     <title>Trusted Input</title>
     <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <script src="js/libs/jquery/jquery-2.0.3.min.js"></script>
+    <script src="js/libs/crypto-js/aes.js"></script>
+    <script src="js/trusted_input.js"></script>
   </head>
   <body>
-    <div id="encryption-password">
-      <label for="password-input">Encryption Password:</label><br/>
-      <input type="password" name="password-input" id="password-input">
-    </div>
-    <button id="submit-button">Submit Encrypted</button>
+    <label for="password-input">Encryption Password:</label><br/>
+    <input type="password" name="password-input" id="password-input">
+
     <textarea id="user-content"></textarea>
+
+    <button id="submit-button">Encrypt and Submit</button>
   </body>
 </html>
