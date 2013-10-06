@@ -1,4 +1,4 @@
-interface EncryptedContent {
+interface UserContent {
     id: int;
-    encrypted_content: string;
+    content: string;
 }
