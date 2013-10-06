@@ -1,4 +1,4 @@
 interface UserContent {
-    id: int;
+    id: number;
     content: string;
 }
