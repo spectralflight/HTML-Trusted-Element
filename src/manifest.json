@@ -1,0 +1,10 @@
+{
+  "name": "HTML-Trusted-Element",
+  "version": "0.1",
+  "description": "HTML DOM element for running untrusted code with access to user data in a sandboxed environment.",
+  "background": {
+    "persistent": false,
+    "scripts": ["js/background.js"]
+  },
+  "permissions": ["https?://*"],
+}
