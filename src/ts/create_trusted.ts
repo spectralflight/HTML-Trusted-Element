@@ -1,6 +1,6 @@
 // ============================================================================
 
-function assert(condition: bool, message: string) {
+function assert(condition: boolean, message: string) {
     if (!condition) {
         throw (message || "Assertion failed");
     }
