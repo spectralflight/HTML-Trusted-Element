@@ -1,8 +1,8 @@
 /// <reference path="types.d.ts"/>
+/// <reference path="chrome.d.ts"/>
 
 declare var $: any;
 declare var CryptoJS: any;
-declare var chrome: any;
 
 
 var id = undefined;
