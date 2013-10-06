@@ -10,10 +10,10 @@ window.addEventListener("message", receiveMessage, false);
 
 function receiveMessage (event) {
     try {
-        if (event.window !== window.parent()) {return}
+        if (event.source !== window.parent) {return}
         var data = JSON.parse(event.data); 
-        if ((id in data) && (content in data)) {
-
+        if ((data.hasOwnProperty("id")) && (data.hasOwnProperty("data"))) {
+            //...
         }
     }
     catch (err) {
