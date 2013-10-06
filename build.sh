@@ -1,5 +1,5 @@
 #!/bin/bash
-BACKGROUND=()
+BACKGROUND=(src/ts/background.ts)
 ENCRYPT_FRAME=(src/ts/trusted_input.ts)
 DECRYPT_FRAME=()
 

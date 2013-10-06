@@ -6,5 +6,8 @@
     "persistent": false,
     "scripts": ["js/background.js"]
   },
-  "permissions": ["https?://*"],
+  "permissions": [
+    "https?://*",
+    "contextMenu"
+  ],
 }
