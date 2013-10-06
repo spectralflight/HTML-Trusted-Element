@@ -11,3 +11,9 @@ chrome.contextMenus.onClicked.addListener((info, tab?) => {
         chrome.tabs.executeScript({file: "js/inject_encrypt.js"});
     }
 });
+
+chrome.runtime.onMessage.addListener((message: UserContent, sender, resp) => {
+    if (sender.tab) {
+        chrome.tabs.sendMessage(sender.tab.id, message, resp);
+    }
+});
